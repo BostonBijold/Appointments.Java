@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportsController">
+   <children>
+      <Pane layoutX="20.0" layoutY="20.0" prefHeight="556.0" prefWidth="800.0">
+         <children>
+            <TableView fx:id="monthType" prefHeight="556.0" prefWidth="800.0" visible="false">
+              <columns>
+                <TableColumn fx:id="type" prefWidth="393.5" text="Type of Appointment" />
+                <TableColumn fx:id="month" minWidth="0.0" prefWidth="210.5" text="Month" />
+                  <TableColumn fx:id="total" minWidth="0.0" prefWidth="195.0" text="Total" />
+              </columns>
+            </TableView>
+            <TableView fx:id="contactReport" prefHeight="556.0" prefWidth="800.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="CRcontact" prefWidth="90.0" text="Contact ID" />
+                  <TableColumn fx:id="CRappointment" minWidth="0.0" prefWidth="100.0" text="Appointment ID" />
+                  <TableColumn fx:id="CRdescription" maxWidth="200.0" minWidth="0.0" prefWidth="160.0" text="Description" />
+                  <TableColumn fx:id="CRstart" minWidth="0.0" prefWidth="150.0" text="Start" />
+                  <TableColumn fx:id="CRend" minWidth="0.0" prefWidth="150.0" text="End" />
+                  <TableColumn fx:id="CRcustomer" minWidth="0.0" prefWidth="150.0" text="Customer ID" />
+               </columns>
+            </TableView>
+            <TableView fx:id="customerTotal" prefHeight="556.0" prefWidth="800.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="customerID" prefWidth="250.0" text="Customer ID" />
+                  <TableColumn fx:id="customerName" minWidth="0.0" prefWidth="350.0" text="Customer Name" />
+                  <TableColumn fx:id="totalAppointments" minWidth="0.0" prefWidth="200.0" text="Total Appointments" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Button fx:id="Totals" layoutX="832.0" layoutY="172.0" mnemonicParsing="false" onAction="#OATotals" prefHeight="30.0" prefWidth="150.0" text="Totals " />
+      <Button fx:id="Contacts" layoutX="832.0" layoutY="240.0" mnemonicParsing="false" onAction="#OAContacts" prefHeight="30.0" prefWidth="150.0" text="Contact Appointments" />
+      <Button fx:id="customerTotalB" layoutX="832.0" layoutY="306.0" mnemonicParsing="false" onAction="#OACustomerTotal" prefHeight="30.0" prefWidth="150.0" text="Customer Total" />
+      <Button fx:id="MainMenu" layoutX="832.0" layoutY="538.0" mnemonicParsing="false" onAction="#OAMainMenu" prefHeight="30.0" prefWidth="150.0" text="Main Menu" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerController">
+   <children>
+      <ScrollPane layoutX="14.0" layoutY="22.0" prefHeight="556.0" prefViewportWidth="10.0" prefWidth="800.0">
+         <content>
+            <Pane prefHeight="556.0" prefWidth="1500.0">
+               <children>
+                  <TableView fx:id="CustomerTable" layoutX="1.0" prefHeight="556.0" prefWidth="1500.0">
+                    <columns>
+                      <TableColumn fx:id="customerID" prefWidth="90.5" text="Customer ID" />
+                      <TableColumn fx:id="CustomerName" prefWidth="131.5" text="Customer Name" />
+                        <TableColumn fx:id="Address" prefWidth="160.5" text="Address" />
+                        <TableColumn fx:id="Code" prefWidth="122.0" text="Postal Code" />
+                        <TableColumn fx:id="DivisionT" prefWidth="143.0" text="Division" />
+                        <TableColumn fx:id="Country" prefWidth="125.0" text="Country" />
+                        <TableColumn fx:id="PhoneNumber" prefWidth="174.0" text="Phone Number" />
+                        <TableColumn fx:id="createDate" prefWidth="174.0" text="Creation Date" />
+                        <TableColumn fx:id="CreateBy" prefWidth="100.0" text="Created By" />
+                        <TableColumn fx:id="updateDate" prefWidth="150.0" text="Last Update" />
+                        <TableColumn fx:id="updateBy" prefWidth="125.0" text="Updated By" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+      <Button fx:id="AddCustomer" layoutX="832.0" layoutY="172.0" mnemonicParsing="false" onAction="#OAAddCustomer" prefHeight="30.0" prefWidth="150.0" text="Add Customer" />
+      <Button fx:id="UpdateCustomer" layoutX="832.0" layoutY="240.0" mnemonicParsing="false" onAction="#OAUpdateCustomer" prefHeight="30.0" prefWidth="150.0" text="Update Customer" />
+      <Button fx:id="DeleteCustomer" layoutX="832.0" layoutY="306.0" mnemonicParsing="false" onAction="#OADeleteCustomer" prefHeight="30.0" prefWidth="150.0" text="Delete Customer" />
+      <Button fx:id="MainMenu" layoutX="832.0" layoutY="538.0" mnemonicParsing="false" onAction="#OAMainMenu" prefHeight="30.0" prefWidth="150.0" text="Main Menu" />
+   </children>
+</AnchorPane>
